@@ -1,23 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Forum Auto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
+
+<header class="topbar">
+  <div class="logo">💬 Forum Auto</div>
+  <div>
+    <a href="index.html">Config</a>
+    <a href="forum.html">Forum</a>
+  </div>
+</header>
 
 <div class="container">
 
-<h1>💬 Forum Auto</h1>
+  <h1>Communauté</h1>
 
-<div class="card">
+  <div class="card">
 
-<input id="titre" placeholder="Titre du post">
-<textarea id="message" placeholder="Décris ta config / problème"></textarea>
+    <input id="titre" placeholder="Titre">
+    <textarea id="message" placeholder="Ton message..."></textarea>
 
-<button onclick="poster()">Publier</button>
+    <button onclick="poster()">Publier</button>
 
-</div>
+  </div>
 
-<div id="posts"></div>
-
-<a href="index.html">← Retour configurateur</a>
+  <div id="posts"></div>
 
 </div>
 
 <script src="app.js"></script>
 </body>
+</html>

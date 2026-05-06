@@ -1,39 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AutoConfig</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
+
+<header class="topbar">
+  <div class="logo">🏁 AutoConfig</div>
+  <div>
+    <a href="index.html">Config</a>
+    <a href="forum.html">Forum</a>
+  </div>
+</header>
 
 <div class="container">
 
-<h1>🔧 Simulateur de Préparation Auto</h1>
+  <h1>Simulateur de préparation</h1>
 
-<div class="card">
+  <div class="card">
 
-<select id="marque">
-  <option>BMW</option>
-</select>
+    <label>Marque</label>
+    <select id="marque">
+      <option>BMW</option>
+    </select>
 
-<select id="modele">
-  <option>Série 3</option>
-</select>
+    <label>Modèle</label>
+    <select id="modele">
+      <option>Série 3</option>
+    </select>
 
-<select id="moteur">
-  <option>320d 190</option>
-</select>
+    <label>Moteur</label>
+    <select id="moteur">
+      <option>320d 190</option>
+    </select>
 
-<select id="stage">
-  <option value="stage1">Stage 1</option>
-  <option value="stage2">Stage 2</option>
-</select>
+    <label>Préparation</label>
+    <select id="stage">
+      <option value="stage1">Stage 1</option>
+      <option value="stage2">Stage 2</option>
+    </select>
 
-<button onclick="calcul()">Calculer</button>
+    <button onclick="calcul()">Simuler</button>
 
-<div class="result" id="resultat"></div>
+    <div id="resultat" class="result"></div>
 
-<button onclick="proposer()">Proposer cette config</button>
+    <button onclick="proposer()">Proposer cette config</button>
 
-</div>
-
-<a href="forum.html">💬 Aller au forum</a>
+  </div>
 
 </div>
 
 <script src="app.js"></script>
 </body>
+</html>
