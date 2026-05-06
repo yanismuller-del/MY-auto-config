@@ -1,53 +1,70 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0b0f14;
+  font-family: system-ui;
+  background: #0a0a0a;
   color: white;
 }
 
 .topbar {
+  position: sticky;
+  top: 0;
+  background: rgba(17,24,39,0.9);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  background: #111827;
+  padding: 14px;
+  border-bottom: 1px solid #1f2937;
 }
 
 .topbar a {
-  color: white;
+  color: #aaa;
   text-decoration: none;
   margin-left: 10px;
+  font-size: 14px;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
 }
 
 .card {
   background: #111827;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 12px;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 14px;
 }
 
 input, textarea, select {
   width: 100%;
   margin-top: 10px;
   padding: 10px;
-  background: #1f2937;
-  border: none;
+  background: #0f172a;
+  border: 1px solid #1f2937;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 button {
   width: 100%;
   margin-top: 10px;
-  padding: 12px;
+  padding: 11px;
   background: #22c55e;
   border: none;
+  border-radius: 10px;
   color: white;
   font-weight: bold;
-  border-radius: 8px;
+}
+
+img.post-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.user {
+  font-size: 13px;
+  opacity: 0.7;
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Messages</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div>💬 Messages</div>
+  <a href="index.html">Feed</a>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<input id="to" placeholder="Pseudo destinataire">
+<textarea id="msg" placeholder="Message"></textarea>
+
+<button onclick="sendDM()">Envoyer</button>
+
+</div>
+
+<div id="messages"></div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

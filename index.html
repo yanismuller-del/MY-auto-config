@@ -2,55 +2,25 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>AutoConfig</title>
+<title>AutoSocial</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="topbar">
-  <div class="logo">🏁 AutoConfig</div>
+  <div>🏁 AutoSocial</div>
   <div>
-    <a href="index.html">Config</a>
-    <a href="forum.html">Forum</a>
+    <a href="index.html">Feed</a>
+    <a href="post.html">Poster</a>
+    <a href="profile.html">Profil</a>
+    <a href="dm.html">Messages</a>
   </div>
 </header>
 
 <div class="container">
-
-  <h1>Simulateur de préparation</h1>
-
-  <div class="card">
-
-    <label>Marque</label>
-    <select id="marque">
-      <option>BMW</option>
-    </select>
-
-    <label>Modèle</label>
-    <select id="modele">
-      <option>Série 3</option>
-    </select>
-
-    <label>Moteur</label>
-    <select id="moteur">
-      <option>320d 190</option>
-    </select>
-
-    <label>Préparation</label>
-    <select id="stage">
-      <option value="stage1">Stage 1</option>
-      <option value="stage2">Stage 2</option>
-    </select>
-
-    <button onclick="calcul()">Simuler</button>
-
-    <div id="resultat" class="result"></div>
-
-    <button onclick="proposer()">Proposer cette config</button>
-
-  </div>
-
+  <h1>🔥 Feed Automobile</h1>
+  <div id="feed"></div>
 </div>
 
 <script src="app.js"></script>
