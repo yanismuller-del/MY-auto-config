@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Auto Config</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
-<h1>Simule ta préparation</h1>
+<div class="container">
+
+<h1>🔧 Simulateur de Préparation Auto</h1>
+
+<div class="card">
 
 <select id="marque">
   <option>BMW</option>
@@ -28,13 +25,15 @@
 
 <button onclick="calcul()">Calculer</button>
 
-<div id="resultat"></div>
+<div class="result" id="resultat"></div>
 
-<br><br>
+<button onclick="proposer()">Proposer cette config</button>
 
-<a href="forum.html">Accéder au forum</a>
+</div>
+
+<a href="forum.html">💬 Aller au forum</a>
+
+</div>
 
 <script src="app.js"></script>
-
 </body>
-</html>

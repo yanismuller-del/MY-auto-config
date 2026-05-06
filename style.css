@@ -1,19 +1,66 @@
 body {
-  background: #111;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
   color: white;
-  font-family: Arial;
-  text-align: center;
 }
 
-select, button {
-  margin: 10px;
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+select, textarea, input {
+  width: 100%;
   padding: 10px;
+  margin-top: 10px;
   border-radius: 8px;
   border: none;
+  background: #2a2a2a;
+  color: white;
 }
 
 button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
   background: #00c853;
   color: white;
+  font-weight: bold;
   cursor: pointer;
+}
+
+button:hover {
+  background: #00e676;
+}
+
+.result {
+  margin-top: 15px;
+  padding: 15px;
+  background: #222;
+  border-radius: 8px;
+}
+
+a {
+  color: #00c853;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
 }

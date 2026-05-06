@@ -39,13 +39,14 @@ function afficher() {
 
   let html = "";
 
-  posts.forEach(p => {
-    html += `<h3>${p.titre}</h3><p>${p.message}</p>`;
+  posts.reverse().forEach(p => {
+    html += `
+      <div class="card">
+        <h3>${p.titre}</h3>
+        <p>${p.message}</p>
+      </div>
+    `;
   });
 
   document.getElementById("posts").innerHTML = html;
-}
-
-if (document.getElementById("posts")) {
-  afficher();
 }
