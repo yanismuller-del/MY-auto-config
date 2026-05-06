@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Poster</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div>➕ Nouveau post</div>
+  <a href="feed.html">Retour</a>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<input id="titre" placeholder="Titre (ex: BMW 320d Stage 1)">
+<textarea id="desc" placeholder="Description / config"></textarea>
+
+<select id="tag">
+  <option>BMW</option>
+  <option>Audi</option>
+  <option>Stage 1</option>
+  <option>E85</option>
+</select>
+
+<button onclick="createPost()">Publier</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

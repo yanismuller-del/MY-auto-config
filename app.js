@@ -1,69 +1,71 @@
-const data = {
-  BMW: {
-    "Série 3": {
-      "320d 190": {
-        stage1: 230,
-        stage2: 260
-      }
-    }
-  }
-};
-
-// CONFIGURATEUR
-function calcul() {
-  let moteur = document.getElementById("moteur").value;
-  let stage = document.getElementById("stage").value;
-
-  let result = data["BMW"]["Série 3"][moteur][stage];
-
-  document.getElementById("resultat").innerHTML =
-    "Puissance estimée : " + result + " ch";
-}
-
-// PROPOSITION CONFIG
-function proposer() {
-  let config = {
-    moteur: document.getElementById("moteur").value,
-    stage: document.getElementById("stage").value
-  };
-
-  let list = JSON.parse(localStorage.getItem("configs")) || [];
-  list.push(config);
-  localStorage.setItem("configs", JSON.stringify(list));
-
-  alert("Config envoyée !");
-}
-
-// FORUM
-function poster() {
-  let titre = document.getElementById("titre").value;
-  let message = document.getElementById("message").value;
+function createPost() {
+  let title = document.getElementById("titre").value;
+  let desc = document.getElementById("desc").value;
+  let tag = document.getElementById("tag").value;
 
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
-  posts.push({ titre, message });
+  let post = {
+    title,
+    desc,
+    tag,
+    likes: 0,
+    comments: []
+  };
+
+  posts.push(post);
+
   localStorage.setItem("posts", JSON.stringify(posts));
 
-  afficher();
+  alert("Post publié !");
 }
 
-function afficher() {
+function loadFeed() {
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
   let html = "";
 
-  posts.reverse().forEach(p => {
+  posts.reverse().forEach((p, index) => {
     html += `
       <div class="card">
-        <h3>${p.titre}</h3>
-        <p>${p.message}</p>
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <small>🏷️ ${p.tag}</small>
+
+        <button onclick="like(${index})">❤️ ${p.likes}</button>
+
+        <div>
+          <input placeholder="Commentaire" id="c${index}">
+          <button onclick="comment(${index})">Commenter</button>
+        </div>
+
+        <div id="comments${index}">
+          ${p.comments.map(c => `<p>💬 ${c}</p>`).join("")}
+        </div>
       </div>
     `;
   });
 
-  document.getElementById("posts").innerHTML = html;
+  document.getElementById("feed").innerHTML = html;
 }
 
-if (document.getElementById("posts")) {
-  afficher();
+function like(i) {
+  let posts = JSON.parse(localStorage.getItem("posts"));
+  posts[i].likes++;
+  localStorage.setItem("posts", JSON.stringify(posts));
+  loadFeed();
+}
+
+function comment(i) {
+  let posts = JSON.parse(localStorage.getItem("posts"));
+  let c = document.getElementById("c"+i).value;
+
+  posts[i].comments.push(c);
+
+  localStorage.setItem("posts", JSON.stringify(posts));
+  loadFeed();
+}
+
+if (document.getElementById("feed")) {
+  loadFeed();
 }

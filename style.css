@@ -14,13 +14,8 @@ body {
 
 .topbar a {
   color: white;
-  margin-left: 15px;
   text-decoration: none;
-  opacity: 0.7;
-}
-
-.topbar a:hover {
-  opacity: 1;
+  margin-left: 10px;
 }
 
 .container {
@@ -31,15 +26,14 @@ body {
 
 .card {
   background: #111827;
-  padding: 20px;
+  padding: 15px;
+  margin-top: 15px;
   border-radius: 12px;
-  margin-top: 20px;
 }
 
 input, textarea, select {
   width: 100%;
   margin-top: 10px;
-  margin-bottom: 15px;
   padding: 10px;
   background: #1f2937;
   border: none;
@@ -49,21 +43,11 @@ input, textarea, select {
 
 button {
   width: 100%;
+  margin-top: 10px;
   padding: 12px;
   background: #22c55e;
   border: none;
   color: white;
-  border-radius: 8px;
   font-weight: bold;
-}
-
-button:hover {
-  background: #16a34a;
-}
-
-.result {
-  margin-top: 15px;
-  padding: 10px;
-  background: #1f2937;
   border-radius: 8px;
 }
